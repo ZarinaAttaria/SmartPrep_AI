@@ -1,0 +1,20 @@
+.background-Image {
+  width: 100%;
+}
+.landingPage-container {
+  color: white;
+}
+.top-container {
+  background-image: url("https://ubiminds.com/site/uploads/2024/01/how-can-ai-help-me-ace-interviews.jpg.webp");
+  height: 500px;
+  opacity: 0.5;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.heading {
+}
+.top-container-text {
+  z-index: 2;
+}
