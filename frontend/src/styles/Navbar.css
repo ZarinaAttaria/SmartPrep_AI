@@ -2,8 +2,8 @@
   width: 100%;
 }
 .navbar-logo {
-  height: 3%;
-  width: 3%;
+  height: 5%;
+  width: 5%;
 }
 .getStarted-Btn {
   background-color: rgb(148, 148, 221);
@@ -17,4 +17,10 @@
 }
 .getStarted-link {
   color: white !important;
+}
+.navbar-left {
+  margin-left: 40px;
+}
+.navbar-collapse {
+  margin-right: 30px !important;
 }

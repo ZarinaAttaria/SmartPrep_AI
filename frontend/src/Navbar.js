@@ -5,10 +5,13 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="Interview.png" className="navbar-logo" />
-        <a className="navbar-brand" href="#">
-          SmartPrep_AI
-        </a>
+        <div className="navbar-left">
+          <img src="Interview.png" className="navbar-logo" />
+          <a className="navbar-brand" href="#">
+            SmartPrep_AI
+          </a>
+        </div>
+
         <button
           className="navbar-toggler"
           type="button"

@@ -3,18 +3,106 @@
 }
 .landingPage-container {
   color: white;
+  position: relative;
 }
 .top-container {
-  background-image: url("https://ubiminds.com/site/uploads/2024/01/how-can-ai-help-me-ace-interviews.jpg.webp");
+  background-image: url("https://getetz.com/wp-content/uploads/2023/02/AIRobotInterview-1000x600.jpg");
   height: 500px;
-  opacity: 0.5;
-  z-index: 1;
+  background-size: cover;
+
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+
+  position: relative;
+}
+.top-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 .heading {
+  font-size: 50px;
 }
 .top-container-text {
+  position: relative;
+  margin-left: 60px;
+  margin-top: 60px;
+  color: white;
   z-index: 2;
+}
+.getStartedBtn {
+  background-color: rgb(96, 96, 249);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 1%;
+  border-radius: 5px;
+}
+.top-para {
+  font-size: 20px;
+}
+.whyuse-Container {
+  display: flex;
+  margin: 20px;
+  margin-top: 50px;
+  gap: 5%;
+}
+.whyuse-image {
+  width: 50%;
+  height: 50%;
+}
+.whyuse-heading {
+  font-size: 40px;
+}
+.whyuse-para {
+  font-size: 17px;
+}
+.features-main-container {
+  margin-top: 100px;
+}
+.features-heading {
+  text-align: center;
+}
+
+.features-container {
+  margin: 50px;
+  height: 400px;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  padding: 40px;
+}
+.features-item {
+  background-color: #565d72;
+  padding: 10px;
+  border-radius: 5%;
+  height: 260px;
+  width: 400px;
+}
+.feature-item-logo {
+  height: 30%;
+  width: 20%;
+}
+.item-logo-container {
+  display: flex;
+  justify-content: center;
+}
+.feature-item-heading {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 17px;
+}
+.feature-item-para {
+  font-size: 15px;
 }
