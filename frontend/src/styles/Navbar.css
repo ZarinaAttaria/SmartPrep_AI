@@ -24,3 +24,11 @@
 .navbar-collapse {
   margin-right: 30px !important;
 }
+@media only screen and (max-width: 600px) {
+  .navbar-left {
+    margin-left: 0px;
+  }
+  .navbar-collapse {
+    margin-right: 0px !important;
+  }
+}

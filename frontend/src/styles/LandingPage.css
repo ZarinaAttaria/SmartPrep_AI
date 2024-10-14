@@ -106,3 +106,38 @@
 .feature-item-para {
   font-size: 15px;
 }
+@media only screen and (max-width: 600px) {
+  .top-container {
+    height: auto;
+  }
+  .top-container-text {
+    margin-left: 10px;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .top-para {
+    font-size: 15px;
+  }
+  .whyuse-Container {
+    flex-direction: column;
+  }
+  .whyuse-image {
+    width: 100%;
+  }
+  .features-container {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .features-item {
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 260px;
+    width: 300px;
+  }
+  .whyuse-heading {
+    margin-top: 20px;
+  }
+}
