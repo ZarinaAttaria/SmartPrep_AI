@@ -29,13 +29,29 @@ async function login(req, res)
     }
     const accessToken= generateAccessToken(user._id)
     const refreshToken= generateRefreshToken(user._id)
-    res.json({user})
+    res.json({user, refresh: refreshToken, accessToken: accessToken})
 }
 catch(error){
     res.status(500).json({ message: 'Login failed', error:error.message });
 }
 }
+async function refreshToken(req, res)
+{
+    try{
+        if(!req.body.refreshToken)
+        {
+            return res.status(401).json({ message: 'Refresh Token is required' });
+        }
+        const user=jwt.verify(req.body.refreshToken, process.env.JWT_REFRESH_SECRET)
+        const accessToken=generateAccessToken(user.userId)
+        res.json({accessToken})
+    }
+    catch(error)
+    {
+        res.status(403).json({ message: 'Invalid or expired refresh token', error: error.message });    }
+}
 module.exports={
     signup,
-    login
+    login,
+    refreshToken
 }
