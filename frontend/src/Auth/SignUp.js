@@ -15,7 +15,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       await axios.post(
-        `${import.meta.API_URL}/users/signup`,
+        `http://localhost:8000/users/signup`,
         {
           username: userName,
           email,

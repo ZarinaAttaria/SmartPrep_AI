@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${import.meta.API_URL}/users/login`,
+        `http://localhost:8000/users/login`,
         {
           username: userName,
           password,
