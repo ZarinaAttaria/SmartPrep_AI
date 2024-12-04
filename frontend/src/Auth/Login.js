@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import "../styles/LoginStyles.css";
 import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router";
 
 const Login = () => {
   const userName = useSelector((state) => state.auth.userName);
   const password = useSelector((state) => state.auth.password);
 
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const handleUserNameChange = (e) => {
     dispatch(setUserName(e.target.value));
   };
@@ -36,6 +37,7 @@ const Login = () => {
       console.log("Login successful", response.data);
       toast.success("Login Successfull!");
       localStorage.setItem("token", response.data.token);
+      navigate("/interviewSetup");
     } catch (error) {
       console.log(error.response?.data?.message || "Login Unsuccessful");
       console.log("Login Error", error);

@@ -5,12 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/Signup.css";
+import { useNavigate } from "react-router";
 
 export default function Signup() {
   const userName = useSelector((state) => state.auth.userName);
   const password = useSelector((state) => state.auth.password);
   const email = useSelector((state) => state.auth.email);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -27,6 +29,7 @@ export default function Signup() {
         }
       );
       toast.success("Signup Successfully.");
+      navigate("/login");
     } catch (error) {
       toast.error("Failed to SignUp.");
     }

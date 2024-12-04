@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Select, Input, Button } from "antd";
 import "../styles/InterviewDescription.css";
+import { toast } from "react-toastify";
+import axios from "axios";
+
 const InterviewDescriptionPage = () => {
-  const [interviewType, setInterviewType] = useState("");
+  const [interviewType, setInterviewType] = useState("Text based");
   const [interviewDuration, setInterviewDuration] = useState("");
   const [jobDescription, setJobDescription] = useState("");
-  const [interviewLevel, setInterviewLevel] = useState("");
+  const [interviewLevel, setInterviewLevel] = useState("Junior");
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const formData = {
       interviewType,
       interviewDuration,
@@ -15,6 +18,26 @@ const InterviewDescriptionPage = () => {
       interviewLevel,
     };
     console.log("Form Data:", formData);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/users/interview-setup",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      console.log("Interview Setup Successful!", response.data);
+      toast.success("Interview Setup Successful!");
+    } catch (error) {
+      console.error(
+        error.response?.data?.message || "Interview Setup Unsuccessful"
+      );
+      toast.error("Interview Setup Unsuccessful");
+    }
   };
 
   return (
@@ -29,12 +52,10 @@ const InterviewDescriptionPage = () => {
           <Select
             placeholder="Select Interview Type"
             value={interviewType}
-            defaultValue="Behavioural"
             onChange={setInterviewType}
             options={[
-              { value: "Behavioural", label: "Behavioural" },
-              { value: "Technical", label: "Technical" },
-              { value: "CaseStudy", label: "Case Study" },
+              { value: "video", label: "Video based" },
+              { value: "text", label: "Text based" },
             ]}
             style={{ width: "100%" }}
           />
@@ -50,6 +71,7 @@ const InterviewDescriptionPage = () => {
             style={{ width: "100%" }}
           />
         </div>
+
         <div>
           <label>Job Description</label>
           <Input.TextArea
@@ -60,13 +82,13 @@ const InterviewDescriptionPage = () => {
             style={{ width: "100%" }}
           />
         </div>
+
         <div>
           <label>Interview Level</label>
           <Select
-            placeholder="Select Interview Levels"
+            placeholder="Select Interview Level"
             value={interviewLevel}
-            onChange={setInterviewLevel}
-            defaultValue="Junior"
+            onChange={setInterviewLevel} // Handle selection change
             options={[
               { value: "Junior", label: "Junior" },
               { value: "Mid", label: "Mid" },

@@ -3,7 +3,7 @@ const interviewSetupSchema = new mongoose.Schema(
   {
     interviewType: {
       type: String,
-      enum: ["Behavioural", "Technical", "CaseStudy"],
+      enum: ["Video", "Text"],
       required: true,
     },
     interviewDuration: {
