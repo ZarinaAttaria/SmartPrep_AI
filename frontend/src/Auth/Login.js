@@ -36,8 +36,9 @@ const Login = () => {
       );
       console.log("Login successful", response.data);
       toast.success("Login Successfull!");
-      localStorage.setItem("token", response.data.token);
-      navigate("/interviewSetup");
+      localStorage.setItem("currentUser", JSON.stringify(response.data));
+
+      navigate("/dashboard");
     } catch (error) {
       console.log(error.response?.data?.message || "Login Unsuccessful");
       console.log("Login Error", error);
