@@ -88,6 +88,91 @@ const Landingpage = () => {
           </div>
         </div>
       </div>
+      <div className="howToUse-container">
+        <h1 className="howToUse-heading">How to Use SmartPrep AI?</h1>
+        <div className="howToUse-steps">
+          <div>
+            <div className="step">
+              <img
+                src="register-icon.png"
+                alt="Register"
+                className="step-icon"
+              />
+              <h3 className="step-title">
+                Step 1: Sign Up & Create Your Profile
+              </h3>
+              <p className="step-description">
+                Sign up with your email and set up your profile to get started.
+              </p>
+            </div>
+            <div className="step">
+              <img
+                src="upload-icon.png"
+                alt="Set Goals"
+                className="step-icon"
+              />
+              <h3 className="step-title">Step 2: Choose Your Interview Type</h3>
+              <p className="step-description">
+                elect the type of interview you want to practice (e.g.,
+                video-based, text-based)
+              </p>
+            </div>
+            <div className="step">
+              <img
+                src="practice-icon.png"
+                alt="Practice"
+                className="step-icon"
+              />
+              <h3 className="step-title">Step 3: Start Practicing </h3>
+              <p className="step-description">
+                Start your interview simulation. Our AI generates personalized
+                questions based on your selected job role and experience.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="step">
+              <img
+                src="track-icon.png"
+                alt="Track Progress"
+                className="step-icon"
+              />
+              <h3 className="step-title">Step 4: Receive Feedback</h3>
+              <p className="step-description">
+                Once you finish, receive detailed feedback on your responses,
+                including content, tone, and body language (for video
+                interviews)
+              </p>
+            </div>
+            <div className="step">
+              <img
+                src="track-icon.png"
+                alt="Track Progress"
+                className="step-icon"
+              />
+              <h3 className="step-title">Step 5:Track Your Progress</h3>
+              <p className="step-description">
+                Monitor your improvement over time with personalized progress
+                reports and recommendations for areas of improvement
+              </p>
+            </div>
+            <div className="step">
+              <img
+                src="track-icon.png"
+                alt="Track Progress"
+                className="step-icon"
+              />
+              <h3 className="step-title">
+                Step 6:Integration with Job Portals
+              </h3>
+              <p className="step-description">
+                Directly import job descriptions and practice for specific job
+                openings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

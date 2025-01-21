@@ -45,9 +45,13 @@
   font-size: 16px;
   padding: 1%;
   border-radius: 5px;
+  margin-top: 16px;
 }
 .top-para {
+  margin-top: 10px;
+
   font-size: 20px;
+  text-align: justify;
 }
 .whyuse-Container {
   display: flex;
@@ -63,12 +67,16 @@
   font-size: 40px;
 }
 .whyuse-para {
+  margin-top: 10px;
   font-size: 17px;
+  text-align: justify;
 }
 .features-main-container {
   margin-top: 100px;
 }
 .features-heading {
+  font-size: 40px;
+
   text-align: center;
 }
 
@@ -101,11 +109,68 @@
 .feature-item-heading {
   margin-top: 10px;
   text-align: center;
+  font-weight: bold;
   font-size: 17px;
 }
 .feature-item-para {
+  margin-top: 5px;
   font-size: 15px;
+  text-align: center;
 }
+.howToUse-container {
+  margin: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.howToUse-heading {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.howToUse-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step {
+  background-color: #565d72;
+  height: 190px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 550px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.step-icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 16px;
+}
+
 @media only screen and (max-width: 600px) {
   .top-container {
     height: auto;
