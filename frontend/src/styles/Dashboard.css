@@ -5,12 +5,25 @@
    display: flex;
 }
 .sidebar{
-   width:25%;
+   width:40%;
 }
 .main-screen{
-   
-   width: 100%;
+   width: 80%;
    margin: 2%;
+   margin-bottom: 0%;
    height:auto;
    background-color: #08030e;
+}
+.profile-name{
+   width:100%;
+   background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1));
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin:auto;
+   margin-bottom: 0%;
+}
+.profile-box{
+   padding-left: 23px;
 }

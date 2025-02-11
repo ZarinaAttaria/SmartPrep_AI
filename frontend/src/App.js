@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import InterviewDescriptionPage from "./pages/InterviewDescriptionPage";
 import TextInterview from "./pages/TextInterview";
 import QuestionBank from "./pages/questionBank";
+import VideoInterview from "./pages/VideoInterview";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/interviewSetup" element={<InterviewDescriptionPage />} />
         <Route path="/textInterview" element={<TextInterview />} />
+        <Route path="/videoInterview" element={<VideoInterview />} />
         <Route path="/questionBank" element={<QuestionBank />} />
       </Routes>
     </>
