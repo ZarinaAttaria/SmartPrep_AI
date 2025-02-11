@@ -1,9 +1,18 @@
 .navbar {
   width: 100%;
+  background: linear-gradient(to bottom, #414141, #b8a5ef) !important;
+  color: white !important;
 }
 .navbar-logo {
   height: 5%;
   width: 5%;
+  color: white !important;
+}
+.navbar-brand {
+  color: white !important;
+}
+.nav-link {
+  color: white !important;
 }
 .getStarted-Btn {
   background-color: rgb(148, 148, 221);
@@ -17,9 +26,11 @@
 }
 .getStarted-link {
   color: white !important;
+  color: white !important;
 }
 .navbar-left {
   margin-left: 40px;
+  color: white !important;
 }
 .navbar-collapse {
   margin-right: 30px !important;

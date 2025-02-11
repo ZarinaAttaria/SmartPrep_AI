@@ -83,8 +83,7 @@
 .features-container {
   margin: 50px;
   height: 400px;
-  background-color: white;
-
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +91,8 @@
   padding: 40px;
 }
 .features-item {
-  background-color: #565d72;
+  background: linear-gradient(to bottom, #656464, #796c9f);
+
   padding: 10px;
   border-radius: 5%;
   height: 260px;
@@ -120,7 +120,7 @@
 .howToUse-container {
   margin: 50px;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   text-align: center;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -128,47 +128,201 @@
 
 .howToUse-heading {
   font-size: 36px;
-  color: #333;
+  color: white;
   margin-bottom: 30px;
 }
 
 .howToUse-steps {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 .step {
-  background-color: #565d72;
-  height: 190px;
-  padding: 20px;
+  background: linear-gradient(to bottom, #656464, #796c9f);
+
+  height: 200px;
+  padding: 30px;
   border-radius: 10px;
-  width: 550px;
+  width: 500px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
   color: white;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  align-items: center; /* Centers content inside */
+  justify-content: center; /* Centers vertically */
+  position: relative;
 }
 
 .step:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.step-icon {
+.step-number {
   width: 60px;
-  margin-bottom: 15px;
+  height: 60px;
+  background-color: #8a8fa1;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: -30px; /* Moves number above title */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .step-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  margin-top: 40px;
   margin-bottom: 10px;
 }
 
 .step-description {
   font-size: 16px;
+  max-width: 90%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .step {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .step-title {
+    font-size: 18px;
+  }
+}
+.whoCanBenefit-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.whoCanBenefit-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.whoCanBenefit-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.whoCanBenefit-item {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  background: linear-gradient(to bottom, #656464, #796c9f);
+}
+
+.whoCanBenefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #071f7b;
+  margin-bottom: 10px;
+}
+
+.benefit-description {
+  font-size: 1rem;
+  color: white;
+}
+
+.faq-container {
+  padding: 50px 70px;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.faq-heading {
+  font-size: 32px;
+  font-weight: 600;
+
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: linear-gradient(to bottom, #656464, #796c9f);
+
+  padding: 20px;
+  border-radius: 8px;
+
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.faq-answer {
+  margin-top: 15px;
+  font-size: 16px;
+  color: white;
+  padding-left: 20px;
+  border-left: 3px solid #007bff;
+}
+
+.faq-item.open .faq-answer {
+  padding-top: 10px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.dropdown-icon {
+  height: 20px;
+  width: 20px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 600px) {

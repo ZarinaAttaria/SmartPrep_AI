@@ -1,0 +1,178 @@
+.text-interview-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titles */
+.text-interview-title {
+  color: #444;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.text-interview-question-title,
+.text-interview-recording-title,
+.text-interview-analysis-title,
+.text-interview-thank-you-title,
+.text-interview-feedback-title {
+  color: #555;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Question Text */
+.text-interview-question-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Input Field */
+.text-interview-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  color: black;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.text-interview-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+.text-interview-submit-button,
+.text-interview-recording-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.text-interview-submit-button:hover,
+.text-interview-recording-button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.text-interview-submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Recording Button Specific Styles */
+.text-interview-recording-button.recording-active {
+  background: #ff4d4d;
+}
+
+.text-interview-recording-button.recording-active:hover {
+  background: #cc0000;
+}
+
+/* Analysis and Feedback Sections */
+.text-interview-analysis-section,
+.text-interview-feedback-section {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.text-interview-analysis-text,
+.text-interview-feedback-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Thank You Section */
+.text-interview-thank-you-section {
+  text-align: center;
+}
+
+.text-interview-thank-you-text {
+  font-size: 1.1rem;
+  color: #666;
+}
+.text-interview-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-interview-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.mic-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  /* background-color: #007bff; */
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.mic-button.recording {
+  background-color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-interview-container {
+    padding: 20px;
+  }
+
+  .text-interview-title {
+    font-size: 1.8rem;
+  }
+
+  .text-interview-question-title,
+  .text-interview-recording-title,
+  .text-interview-analysis-title,
+  .text-interview-thank-you-title,
+  .text-interview-feedback-title {
+    font-size: 1.3rem;
+  }
+
+  .text-interview-submit-button,
+  .text-interview-recording-button {
+    width: 100%;
+    padding: 15px;
+  }
+}
